@@ -1,6 +1,5 @@
 :root{
     --colorBack: #172026;
-    --colorLeter: #04BFAD;
     --colorApp: #04BF9D;
     --colorNumber: #027373;
     --colorApp2: #034e4e;
@@ -30,7 +29,7 @@ h1 {
     margin: 100px auto;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 0 4px var(--colorApp);
+    box-shadow: 0 0 28px var(--colorApp);
 }
 
 #time {
@@ -55,6 +54,7 @@ input[type="text"] {
     border: solid 1px var(--colorBack);
     background-color: var(--colorApp2);
     border-radius:4px;
+    box-shadow: 0 0 4px var(--colorApp2);
     color: var(--colorBack);
     font-weight: bold;
 }
@@ -64,6 +64,7 @@ input[type="submit"] {
     background-color: var(--colorButton);
     border: solid 1px var(--colorBack);
     border-radius:4px;
+    box-shadow: 0 0 4px var(--colorButton);
     color: var(--colorBack);
     font-family: 'Comfortaa', cursive;
     padding: 10px;
@@ -73,6 +74,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: var(--colorButtonHover);
+    box-shadow: 0 0 4px  var(--colorButtonHover);
 }
 #tasks {
     display: flex;
