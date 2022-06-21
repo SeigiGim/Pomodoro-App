@@ -1,0 +1,101 @@
+:root{
+    --colorBack: #172026;
+    --colorLeter: #04BFAD;
+    --colorApp: #04BF9D;
+    --colorNumber: #027373;
+    --colorApp2: #034e4e;
+    --colorButton: #5fcdd9;
+    --colorButtonHover:#D9815F;
+    --colorDone: #8C4930;
+        
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--colorBack);
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+#app {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: var(--colorApp);
+    color: var(--colorBack);
+    width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px var(--colorApp);
+}
+
+#time {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--colorBack);
+}
+
+#time #value {
+    font-size: 64px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: solid 1px var(--colorBack);
+    background-color: var(--colorApp2);
+    border-radius:4px;
+    color: var(--colorBack);
+    font-weight: bold;
+}
+
+button,
+input[type="submit"] {
+    background-color: var(--colorButton);
+    border: solid 1px var(--colorBack);
+    border-radius:4px;
+    color: var(--colorBack);
+    font-family: 'Comfortaa', cursive;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+input[type="submit"]:hover {
+    background-color: var(--colorButtonHover);
+}
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.task .completed {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.done {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--colorDone);
+}
+
