@@ -5,6 +5,7 @@ let timerBreak = null;
 let current = null;
 
 const bAdd = document.querySelector("#bAdd");
+// const bRemove = document.querySelector("#bRemove");
 const itTask = document.querySelector("#itTask");
 const form = document.querySelector("#form");
 const taskName = document.querySelector("#time #taskName");

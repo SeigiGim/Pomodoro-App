@@ -55,7 +55,7 @@ input[type="text"] {
   background-color: var(--colorApp2);
   border-radius: 4px;
   box-shadow: 0 0 4px var(--colorApp2);
-  color: var(--colorBack);
+  color: var(--colorDone);
   font-weight: bold;
   margin: 16px auto auto 16px;
 }
