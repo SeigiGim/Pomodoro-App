@@ -1,103 +1,116 @@
-:root{
-    --colorBack: #172026;
-    --colorApp: #04BF9D;
-    --colorNumber: #027373;
-    --colorApp2: #034e4e;
-    --colorButton: #5fcdd9;
-    --colorButtonHover:#D9815F;
-    --colorDone: #8C4930;
-        
+:root {
+  --colorBack: #172026;
+  --colorApp: #04bf9d;
+  --colorNumber: #027373;
+  --colorApp2: #034e4e;
+  --colorButton: #5fcdd9;
+  --colorButtonHover: #d9815f;
+  --colorDone: #11e35e;
 }
 
 body {
-    font-family: 'Comfortaa', cursive;
-    background-color: var(--colorBack);
-    font-weight: bold;
+  font-family: "Comfortaa", cursive;
+  background-color: var(--colorBack);
+  font-weight: bold;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 #app {
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: var(--colorApp);
-    color: var(--colorBack);
-    width: 500px;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 0 28px var(--colorApp);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--colorApp);
+  color: var(--colorBack);
+  width: 75%;
+  max-width: 600px;
+  margin: 50px auto 50px;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 28px var(--colorApp);
 }
 
 #time {
-    text-align: center;
-    padding: 20px 0;
-    color: var(--colorBack);
+  text-align: center;
+  padding: 20px 0;
+  color: var(--colorBack);
 }
 
 #time #value {
-    font-size: 64px;
+  font-size: 64px;
 }
 
 .form {
-    display: flex;
-    justify-content: center;
-    font-family: 'Comfortaa', cursive;
+  display: flex;
+  justify-content: center;
+  font-family: "Comfortaa", cursive;
 }
 
 input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: solid 1px var(--colorBack);
-    background-color: var(--colorApp2);
-    border-radius:4px;
-    box-shadow: 0 0 4px var(--colorApp2);
-    color: var(--colorBack);
-    font-weight: bold;
+  padding: 10px;
+  width: 75%;
+  border: solid 1px var(--colorBack);
+  background-color: var(--colorApp2);
+  border-radius: 4px;
+  box-shadow: 0 0 4px var(--colorApp2);
+  color: var(--colorBack);
+  font-weight: bold;
+  margin: 16px auto auto 16px;
 }
 
 button,
 input[type="submit"] {
-    background-color: var(--colorButton);
-    border: solid 1px var(--colorBack);
-    border-radius:4px;
-    box-shadow: 0 0 4px var(--colorButton);
-    color: var(--colorBack);
-    font-family: 'Comfortaa', cursive;
-    padding: 10px;
-    font-weight: bold;
+  background-color: var(--colorButton);
+  border: solid 1px var(--colorBack);
+  border-radius: 4px;
+  box-shadow: 0 0 4px var(--colorButton);
+  color: var(--colorBack);
+  font-family: "Comfortaa", cursive;
+  padding: 10px;
+  font-weight: bold;
+  margin: 16px auto auto 16px;
 }
-
 
 input[type="submit"]:hover {
-    background-color: var(--colorButtonHover);
-    box-shadow: 0 0 4px  var(--colorButtonHover);
+  background-color: var(--colorButtonHover);
+  box-shadow: 0 0 4px var(--colorButtonHover);
 }
+
+input[type="submit"]:active {
+  background-color: var(--colorButtonHover);
+  box-shadow: 0 0 4px var(--colorButtonHover);
+}
+
 #tasks {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .task {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .task .completed {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
 }
 
 .done {
-    display: inline-block;
-    padding: 5px;
-    background-color: var(--colorDone);
+  display: inline-block;
+  padding: 5px;
+  background-color: var(--colorDone);
+  border: solid 1px var(--colorBack);
+  border-radius: 4px;
+  font-family: "Comfortaa", cursive;
+  padding: 10px;
+  font-weight: bold;
+  margin: 16px auto auto 16px;
 }
-
