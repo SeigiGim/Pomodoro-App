@@ -5,7 +5,6 @@ let timerBreak = null;
 let current = null;
 
 const bAdd = document.querySelector("#bAdd");
-// const bRemove = document.querySelector("#bRemove");
 const itTask = document.querySelector("#itTask");
 const form = document.querySelector("#form");
 const taskName = document.querySelector("#time #taskName");
@@ -22,6 +21,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+
 function createTask(value) {
   const newTask = {
     id: (Math.random() * 100).toString(36).slice(3),
@@ -36,15 +36,31 @@ function renderTasks() {
   const html = tasks.map((task) => {
     return `
             <div class = "task">
-                <div class = "completed">${
-                  task.completed
-                    ? `<span class = "done">Done</span>`
-                    : `<button class = "start-button" data-id="${task.id}">Start</button>`
-                }</div>
+                <div class = "completed">${task.completed
+        ? `<span class = "done">Done</span>`
+        : `<button class = "start-button" data-id="${task.id}">Start</button>`
+      }</div>
                 <div class = "title">${task.title}</div>
+                <!-- <button class = "delete-button"><i class="fa-solid fa-trash"></i></button> --> 
             </div>
         `;
   });
+
+  //prueba funcion eliminar task//
+
+  // function deleteTask(html) {
+  //   html.parentNode.removeChild(html.parentNode())
+  // }
+
+  // const deleteButtons = document.querySelectorAll(".task .delete-button");
+
+
+  // deleteButtons.forEach((button) => {
+  //   button.addEventListener("click", (e) => {
+  //     deleteTask(deleteTask)
+  // });
+  // })
+  //fin prueba
 
   const tasksContainer = document.querySelector("#tasks");
   tasksContainer.innerHTML = html.join("");
@@ -115,9 +131,8 @@ function renderTime() {
   const seconds = parseInt(time % 60);
 
   timeDiv.textContent = `
-        ${minutes < 10 ? "0" : ""}${minutes}:${
-    seconds < 10 ? "0" : ""
-  }${seconds}
+        ${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""
+    }${seconds}
     `;
 }
 
