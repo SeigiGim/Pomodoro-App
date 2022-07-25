@@ -21,7 +21,6 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-
 function createTask(value) {
   const newTask = {
     id: (Math.random() * 100).toString(36).slice(3),
@@ -36,10 +35,11 @@ function renderTasks() {
   const html = tasks.map((task) => {
     return `
             <div class = "task">
-                <div class = "completed">${task.completed
-        ? `<span class = "done">Done</span>`
-        : `<button class = "start-button" data-id="${task.id}">Start</button>`
-      }</div>
+                <div class = "completed">${
+                  task.completed
+                    ? `<span class = "done">Done</span>`
+                    : `<button class = "start-button" data-id="${task.id}">Start</button>`
+                }</div>
                 <div class = "title">${task.title}</div>
                 <!-- <button class = "delete-button"><i class="fa-solid fa-trash"></i></button> --> 
             </div>
@@ -53,7 +53,6 @@ function renderTasks() {
   // }
 
   // const deleteButtons = document.querySelectorAll(".task .delete-button");
-
 
   // deleteButtons.forEach((button) => {
   //   button.addEventListener("click", (e) => {
@@ -79,7 +78,7 @@ function renderTasks() {
 }
 
 function startButtonHandler(id) {
-  time = 0.2 * 60;
+  time = 0.2 * 60; //cambiar 0.2 por 25 para el funcionamiento normal de la app
   current = id;
   const taskIndex = tasks.findIndex((task) => task.id === id);
 
@@ -104,7 +103,7 @@ function timerHnadler(id) {
 }
 
 function startBreak() {
-  time = 0.2 * 60;
+  time = 0.2 * 60; //cambiar 0.2 por 5 para el funcionamiento normal de la app
   taskName.textContent = "Break";
   renderTime();
   timerBreak = setInterval(() => {
@@ -131,8 +130,9 @@ function renderTime() {
   const seconds = parseInt(time % 60);
 
   timeDiv.textContent = `
-        ${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""
-    }${seconds}
+        ${minutes < 10 ? "0" : ""}${minutes}:${
+    seconds < 10 ? "0" : ""
+  }${seconds}
     `;
 }
 
